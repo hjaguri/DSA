@@ -1,12 +1,27 @@
 public class Main {
     public static void main(String[] args) {
-       Queue q=new Queue(5);
-       q.push(2);
-        q.push(10);
-        q.printQueue();
+       QueueLinkedList l=new QueueLinkedList();
+       l.push(10);
+       l.push(20);
+       l.push(30);
+       l.push(40);
+       l.push(50);
+       l.printQueue();
         System.out.println();
-        q.pop();
-        q.printQueue();
+        l.pop();
+        l.printQueue();
+        System.out.println();
+        l.pop();
+        l.printQueue();
+        System.out.println();
+        l.push(100);
+        l.printQueue();
+        System.out.println();
+        l.pop();
+        l.pop();
+        l.pop();
+        l.pop();
+        l.printQueue();
     }
 }
 
@@ -29,6 +44,7 @@ class Queue{
         if(rear==-1){
             System.out.println("Empty");
         }
+
         for(int i=0;i<rear;i++){
             arr[i]=arr[i+1];
         }
